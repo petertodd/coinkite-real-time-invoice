@@ -9,8 +9,15 @@
     font-size: 80%;
 }
 .cki-big-pay {
-    margin-top: 2em;
+    margin-top: 1em;
     margin-bottom: 1.5em;
+}
+.cki-link-btn {
+    color: grey;
+}
+.cki-timer-bar {
+    margin: 0;
+    margin-top: 1.5em;
 }
 .coinkite-credit {
     margin: 0;
@@ -22,20 +29,27 @@
 
 <div class="container">
   <div class="row well">
-
     <div class="col-xs-8 text-center">
-        <p class="cki-crypto-amount">
-          0.0500 BTC
-        </p>
-        <p class="cki-fiat-amount">
-            ≈ $100 USD
-        </p>
-        <p class="cki-big-pay">
-          <button class="btn btn-large btn-primary">Pay with Bitcoin</button>
-        </p>
-        <p>
-          <button class="btn btn-xs">&nbsp; View Address &nbsp;</button>
-        </p>
+      <span class="pull-left text-left">
+          <a class="cki-link-btn"><i class="fa fa-refresh"></i></span></a>
+      </span>
+      <p class="cki-crypto-amount">
+        0.0500 BTC
+      </p>
+      <p class="cki-fiat-amount">
+        ≈ $100 USD
+      </p>
+      <p class="cki-big-pay">
+        <button class="btn btn-large btn-primary">Pay with Bitcoin</button>
+      </p>
+      <p>
+        <button class="btn btn-xs">&nbsp; View Address &nbsp;</button>
+      </p>
+      <div class="progress cki-timer-bar">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+    8 minutes left
+        </div>
+      </div>
     </div>
 
     <div class="col-xs-4 text-center">
