@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block page_body %}
+<style>
+.cki-crypto-amount {
+    font-size: 125%;
+}
+.cki-fiat-amount {
+    font-size: 80%;
+}
+.cki-big-pay {
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+.coinkite-credit {
+    margin: 0;
+    margin-top: 10px;
+    opacity: 40%;
+    font-size: 75%;
+}
+</style>
+
+<div class="container">
+  <div class="row well">
+
+    <div class="col-xs-8 text-center">
+        <p class="cki-crypto-amount">
+          0.0500 BTC
+        </p>
+        <p class="cki-fiat-amount">
+            ≈ $100 USD
+        </p>
+        <p class="cki-big-pay">
+          <button class="btn btn-large btn-primary">Pay with Bitcoin</button>
+        </p>
+        <p>
+          <button class="btn btn-xs">&nbsp; View Address &nbsp;</button>
+        </p>
+    </div>
+
+    <div class="col-xs-4 text-center">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" class="img-thumbnail" alt="QR Code">
+
+        <div class="coinkite-credit">
+          Powered by <a href="https://coinkite.com" target="_new">Coinkite</a>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock page_body %}
