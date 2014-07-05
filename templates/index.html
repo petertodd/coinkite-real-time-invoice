@@ -1,125 +1,17 @@
 {% extends "base.html" %}
 
 {% block page_body %}
-<style>
-.cki-crypto-amount {
-    margin-bottom: 0;
-}
-.cki-fiat-amount {
-    xxfont-size: 80%;
-
-}
-.cki-big-pay {
-    margin-top: 1em;
-    margin-bottom: 1.5em;
-}
-.cki-link-btn {
-    color: grey;
-}
-.cki-pubkey > code {
-    color: black;
-}
-.cki-timer-bar {
-    margin: 0;
-    margin-top: 1.5em;
-}
-.coinkite-credit {
-    opacity: 40%;
-    font-size: 75%;
-}
-table.cki-rate-table > tbody > tr > td {
-    white-space: pre;
-}
-table.cki-rate-table tr:first-child td {
-    border-top: none;
-}
-table.cki-rate-table tr:first-child th {
-    border-top: none;
-}
-
-.js-selectable {
-    padding: 1px;
-    border-radius: 4px;
-}
-.js-selectable:hover {
-    border: 1px dashed grey;
-    cursor: pointer;
-}
-
-.cki-topmost-row {
-    margin-top: -10px;
-    margin-bottom: 10px;
-}
-
-.qrcode-container > svg {
-    width: 200px;
-    height: 200px;
-    border: 1px solid grey;
-    border-radius: 8px;
-    text-align: right;
-}
-
-</style>
-
-<div class="container well" id="ck-invoice">
-  <div class="row cki-topmost-row">
-    <div class="col-sm-12">
-      <span class="pull-left text-left">
-          <a class="cki-link-btn"><i class="fa fa-refresh"></i></span></a>
-      </span>
-      <span class="pull-right coinkite-credit text-right">
-        Powered by <a href="https://coinkite.com" target="_new">Coinkite</a>
-      </span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-6 text-center">
-      <h3 class="cki-payee">
-        Doggy Dash Crypto Cash
-      </h3>
-      <p class="lead cki-crypto-amount">
-        <span class="js-selectable">12.05001234</span> BTC
-      </p>
-      <p class="cki-fiat-amount">
-        ≈ $100 USD
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <a class="popover-dismiss js-popover" data-toggle="popover"
-            title="Exchange Rate" data-html='true'
-            data-placement="bottom"     {# so works on phone #}
-            data-content="<table class='table condensed cki-rate-table'><tbody>
-<tr><td>1 BTC        <td>= <td>$600 USD
-<tr><td>23.34213 BTC <td>= <td>$234234 USD</table>">
-            <i class="fa fa-exchange"></i><i class="fa fa-question"></i></a>
-      </p>
-      <p class="cki-big-pay">
-        <button class="btn btn-large btn-primary"><i class="fa fa-btc fa-lg"></i>
-                &nbsp; Pay with Bitcoin</button>
-      </p>
-      <p class="cki-pubkey">
-        {# <button class="btn btn-xs">&nbsp; View Address &nbsp;</button> #}
-        <code class="js-selectable">1bahxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
-      </p>
-    </div>
-
-    <div class="col-sm-6 text-center">
-      {# <img src="/qr/example.svg" class="img-thumbnail" alt="QR Code" width=80%> #}
-      <div class="qrcode-container">
-        {{ 'bitcoin:1sdlkfjsldfkjsdlfkjsdlfkjsdf?amount=3'|svg_qr(30) }}
-      </div>
-    </div>
-  </div>
+<div class="container well">
   <div class="row">
     <div class="col-sm-12">
-      <div class="progress cki-timer-bar">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
-        </div>
-        <div class="text-center">
-          <i class="fa fa-clock-o"></i> 2:23 left
-        </div>
-      </div>
+      <h1>Coinkite RT Invoice Demo</h1>
+    
+      <ul>
+        <li><a href="/invoice/example.btc">Example with BTC</a>
+        <li><a href="/invoice/example.ltc">Example with LTC</a>
+        <li><a href="/invoice/example.blk">Example with BLK</a>
+        <li><a href="/invoice/example.xtn">Example with XTN</a>
+      </ul>
     </div>
   </div>
 </div>

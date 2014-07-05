@@ -1,18 +1,21 @@
 #!/usr/bin/env python
 #
-#
-#
+
 # Search for libraries also under ./lib
 import os, sys
 sys.path.insert(1, os.path.join(os.path.abspath('.'), 'lib'))
 
 import webapp2, jinja2
+from decimal import Decimal
 import qrcode
 from cStringIO import StringIO
 from jinja2 import Markup
 
 from qrcode.image.svg import SvgPathImage, SvgFragmentImage
 from qrcode.image.pil import PilImage
+from urllib import urlencode
+
+from ckapi import CKRequestor, CKReqReceive, CKObject
 
 # path to CK API
 JINJA_ENV = jinja2.Environment(
@@ -28,6 +31,22 @@ class MainHandler(webapp2.RequestHandler):
         template_values = {}
         template = JINJA_ENV.get_template('index.html')
         self.response.write(template.render(template_values))
+
+class InvoiceHandler(webapp2.RequestHandler):
+    def get(self, token, example='btc'):
+        cct = example.upper()
+        ctx = CKObject(req = CKReqReceive(), amount = Decimal('1.12345678'), cct = cct)
+        ctx.exchange_rates = [
+            ('1 %s' % cct, '$612 USD'), 
+            ('%s %s' % (ctx.amount, cct), '$612 USD'), 
+        ]
+        ctx.label = 'Doggy Dash Crypto Cash'
+        ctx.pubkey = '1blahxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+        ctx.bitcoin_link = ('bitcoin:%s?' % ctx.pubkey) + urlencode(dict(
+                            amount = ctx.amount, message = ctx.label))
+    
+        template = JINJA_ENV.get_template('invoice.html')
+        self.response.write(template.render(ctx))
 
 class QRHandler(webapp2.RequestHandler):
     def get(self, nonce, extension):
@@ -71,6 +90,8 @@ JINJA_ENV.filters.update({
 #
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
+    ('/invoice/(\w+)', InvoiceHandler),
+    ('/invoice/(example).(\w+)', InvoiceHandler),
     ('/qr/(\w+).(png|svg)', QRHandler),
 ], debug=True)
 
