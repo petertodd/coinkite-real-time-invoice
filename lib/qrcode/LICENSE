@@ -1,0 +1,739 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html class="   ">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <title>lincolnloop/python-qrcode at master · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <meta property="fb:app_id" content="1401488693436528"/>
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="lincolnloop/python-qrcode" name="twitter:title" /><meta content="python-qrcode - Python QR Code image generator" name="twitter:description" /><meta content="https://avatars3.githubusercontent.com/u/1964?s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars3.githubusercontent.com/u/1964?s=400" property="og:image" /><meta content="lincolnloop/python-qrcode" property="og:title" /><meta content="https://github.com/lincolnloop/python-qrcode" property="og:url" /><meta content="python-qrcode - Python QR Code image generator" property="og:description" />
+
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035">
+    
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+      <meta name="google-analytics" content="UA-3769691-2">
+
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="D8DF895D:4859:26F3CEA:53B7764C" name="octolytics-dimension-request_id" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico" />
+
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="TzGgu42Lpwx2wzDSwR0Bb6T5wbnTJ4loN9guhT5+IclE1nlEWrSYrjpHvwjES3GkjJJ9tOYCEsgDhAFKv4t0pg==" name="csrf-token" />
+
+    <link href="https://assets-cdn.github.com/assets/github-b86b560d4138567815944297e6bd9f0bb29e59eb.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://assets-cdn.github.com/assets/github2-de984238bc39c374ee4a4db0ff8e49538c787680.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+
+    <meta http-equiv="x-pjax-version" content="5b69c0d16986b0d363ce28fadb9bd912">
+
+      
+  <meta name="description" content="python-qrcode - Python QR Code image generator" />
+
+
+  <meta content="1964" name="octolytics-dimension-user_id" /><meta content="lincolnloop" name="octolytics-dimension-user_login" /><meta content="2747590" name="octolytics-dimension-repository_id" /><meta content="lincolnloop/python-qrcode" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="2747590" name="octolytics-dimension-repository_network_root_id" /><meta content="lincolnloop/python-qrcode" name="octolytics-dimension-repository_network_root_nwo" />
+
+  <link href="https://github.com/lincolnloop/python-qrcode/commits/master.atom" rel="alternate" title="Recent Commits to python-qrcode:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_out  env-production  vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions">
+        <a class="button primary" href="/join">Sign up</a>
+      <a class="button signin" href="/login?return_to=%2Flincolnloop%2Fpython-qrcode%2Fblame%2Fmaster%2FLICENSE">Sign in</a>
+    </div>
+
+    <div class="command-bar js-command-bar  in-repository">
+
+      <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+          <li class="features"><a href="/features">Features</a></li>
+          <li class="enterprise"><a href="https://enterprise.github.com/">Enterprise</a></li>
+          <li class="blog"><a href="/blog">Blog</a></li>
+      </ul>
+        <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<div class="commandbar">
+  <span class="message"></span>
+  <input type="text" data-hotkey="s, /" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    
+      data-repo="lincolnloop/python-qrcode"
+      data-branch="master"
+      data-sha="9c7e591a3b058556aa19bae3ca2c8de63ed7581d"
+  >
+  <div class="display hidden"></div>
+</div>
+
+    <input type="hidden" name="nwo" value="lincolnloop/python-qrcode" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target" role="button" aria-haspopup="true">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="help tooltipped tooltipped-s" aria-label="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+    </div>
+
+  </div>
+</div>
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+<ul class="pagehead-actions">
+
+
+  <li>
+      <a href="/login?return_to=%2Flincolnloop%2Fpython-qrcode"
+    class="minibutton with-count star-button tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span class="octicon octicon-star"></span>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/lincolnloop/python-qrcode/stargazers">
+      447
+    </a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Flincolnloop%2Fpython-qrcode"
+        class="minibutton with-count js-toggler-target fork-button tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-repo-forked"></span>
+        Fork
+      </a>
+      <a href="/lincolnloop/python-qrcode/network" class="social-count">
+        112
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="/lincolnloop" class="url fn" itemprop="url" rel="author"><span itemprop="title">lincolnloop</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="/lincolnloop/python-qrcode" class="js-current-repository js-repo-home-link">python-qrcode</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline js-new-discussion-timeline  ">
+        <div class="repository-sidebar clearfix">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Code">
+        <a href="/lincolnloop/python-qrcode" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /lincolnloop/python-qrcode">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped tooltipped-w" aria-label="Issues">
+          <a href="/lincolnloop/python-qrcode/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g i" data-selected-links="repo_issues /lincolnloop/python-qrcode/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>2</span>
+            <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+        <a href="/lincolnloop/python-qrcode/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g p" data-selected-links="repo_pulls /lincolnloop/python-qrcode/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>2</span>
+            <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped tooltipped-w" aria-label="Pulse">
+        <a href="/lincolnloop/python-qrcode/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /lincolnloop/python-qrcode/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Graphs">
+        <a href="/lincolnloop/python-qrcode/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /lincolnloop/python-qrcode/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Network">
+        <a href="/lincolnloop/python-qrcode/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /lincolnloop/python-qrcode/network">
+          <span class="octicon octicon-repo-forked"></span> <span class="full-word">Network</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+                
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/lincolnloop/python-qrcode.git" readonly="readonly">
+    <span class="url-box-clippy">
+    <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/lincolnloop/python-qrcode.git" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/lincolnloop/python-qrcode" readonly="readonly">
+    <span class="url-box-clippy">
+    <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/lincolnloop/python-qrcode" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</p>
+
+
+
+                <a href="/lincolnloop/python-qrcode/archive/master.zip"
+                   class="minibutton sidebar-button"
+                   aria-label="Download lincolnloop/python-qrcode as a zip file"
+                   title="Download lincolnloop/python-qrcode as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+<a href="/lincolnloop/python-qrcode/blame/01fd84070895ce5fa36f14be668e379e9bb4a2be/LICENSE" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+
+
+<div class="breadcrumb css-truncate blame-breadcrumb">
+  <span class="css-truncate-target"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/lincolnloop/python-qrcode" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">python-qrcode</span></a></span></span><span class="separator"> / </span><strong class="final-path">LICENSE</strong></span> <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="LICENSE" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+</div>
+
+<div class="line-age-legend">
+  <span>Newer</span>
+  <ol>
+    <li class='heat1'></li>
+    <li class='heat2'></li>
+    <li class='heat3'></li>
+    <li class='heat4'></li>
+    <li class='heat5'></li>
+    <li class='heat6'></li>
+    <li class='heat7'></li>
+    <li class='heat8'></li>
+    <li class='heat9'></li>
+    <li class='heat10'></li>
+  </ol>
+  <span>Older</span>
+</div>
+
+<div class="file-box">
+  <div class="file">
+    <div class="meta clearfix" style="border-bottom: none;">
+      <div class="info">
+        <span class="icon"><span class="octicon octicon-file-text"></span></span>
+        <span class="mode" title="File Mode">100644</span>
+        <span class="meta-divider"></span>
+          <span>48 lines (40 sloc)</span>
+          <span class="meta-divider"></span>
+        <span>2.143 kb</span>
+      </div>
+      <div class="actions">
+        <div class="button-group">
+          <a href="/lincolnloop/python-qrcode/raw/master/LICENSE" class="minibutton" id="raw-url">Raw</a>
+          <a href="/lincolnloop/python-qrcode/blob/master/LICENSE" class="minibutton js-update-url-with-hash">Normal View</a>
+          <a href="/lincolnloop/python-qrcode/commits/master/LICENSE" class="minibutton" rel="nofollow">History</a>
+        </div><!-- /.button-group -->
+      </div><!-- /.actions -->
+    </div>
+
+    <div class="highlight data blame">
+      <table class="file-code file-blame" data-repo-created="2011-11-10T01:36:22-08:00">
+
+            <tr class="section-first">
+              <td nowrap class="commitinfo">
+                <code>
+                  <a href="/lincolnloop/python-qrcode/commit/e0b386f3045903df618b7c4d6e9d60cdd556f057">e0b386f3</a> &#187;
+                  <a href="/SmileyChris" rel="contributor">SmileyChris</a>
+                </code>
+                <br />
+                <span class="date">2011-11-10</span>
+                <span class="message" title="Add license, readme and setup.py module">
+                  Add license, readme and setup.py module
+
+                </span>
+              </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID1" rel="#L1">1</td>
+            <td nowrap class="diff-line-code line-data" id="LC1">Copyright (c) 2011, Lincoln Loop</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID2" rel="#L2">2</td>
+            <td nowrap class="diff-line-code line-data" id="LC2">All rights reserved.</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID3" rel="#L3">3</td>
+            <td nowrap class="diff-line-code line-data" id="LC3"></td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID4" rel="#L4">4</td>
+            <td nowrap class="diff-line-code line-data" id="LC4">Redistribution and use in source and binary forms, with or without</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID5" rel="#L5">5</td>
+            <td nowrap class="diff-line-code line-data" id="LC5">modification, are permitted provided that the following conditions are met:</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID6" rel="#L6">6</td>
+            <td nowrap class="diff-line-code line-data" id="LC6"></td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID7" rel="#L7">7</td>
+            <td nowrap class="diff-line-code line-data" id="LC7">    * Redistributions of source code must retain the above copyright notice,</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID8" rel="#L8">8</td>
+            <td nowrap class="diff-line-code line-data" id="LC8">      this list of conditions and the following disclaimer.</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID9" rel="#L9">9</td>
+            <td nowrap class="diff-line-code line-data" id="LC9">    * Redistributions in binary form must reproduce the above copyright notice,</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID10" rel="#L10">10</td>
+            <td nowrap class="diff-line-code line-data" id="LC10">      this list of conditions and the following disclaimer in the documentation</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID11" rel="#L11">11</td>
+            <td nowrap class="diff-line-code line-data" id="LC11">      and/or other materials provided with the distribution.</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID12" rel="#L12">12</td>
+            <td nowrap class="diff-line-code line-data" id="LC12">    * Neither the package name nor the names of its contributors may be</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID13" rel="#L13">13</td>
+            <td nowrap class="diff-line-code line-data" id="LC13">      used to endorse or promote products derived from this software without</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID14" rel="#L14">14</td>
+            <td nowrap class="diff-line-code line-data" id="LC14">      specific prior written permission.</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID15" rel="#L15">15</td>
+            <td nowrap class="diff-line-code line-data" id="LC15"></td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID16" rel="#L16">16</td>
+            <td nowrap class="diff-line-code line-data" id="LC16">THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID17" rel="#L17">17</td>
+            <td nowrap class="diff-line-code line-data" id="LC17">ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID18" rel="#L18">18</td>
+            <td nowrap class="diff-line-code line-data" id="LC18">WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE </td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID19" rel="#L19">19</td>
+            <td nowrap class="diff-line-code line-data" id="LC19">DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID20" rel="#L20">20</td>
+            <td nowrap class="diff-line-code line-data" id="LC20">ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID21" rel="#L21">21</td>
+            <td nowrap class="diff-line-code line-data" id="LC21">(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID22" rel="#L22">22</td>
+            <td nowrap class="diff-line-code line-data" id="LC22">LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID23" rel="#L23">23</td>
+            <td nowrap class="diff-line-code line-data" id="LC23">ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID24" rel="#L24">24</td>
+            <td nowrap class="diff-line-code line-data" id="LC24">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID25" rel="#L25">25</td>
+            <td nowrap class="diff-line-code line-data" id="LC25">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID26" rel="#L26">26</td>
+            <td nowrap class="diff-line-code line-data" id="LC26"></td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID27" rel="#L27">27</td>
+            <td nowrap class="diff-line-code line-data" id="LC27"></td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID28" rel="#L28">28</td>
+            <td nowrap class="diff-line-code line-data" id="LC28">-------------------------------------------------------------------------------</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID29" rel="#L29">29</td>
+            <td nowrap class="diff-line-code line-data" id="LC29"></td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID30" rel="#L30">30</td>
+            <td nowrap class="diff-line-code line-data" id="LC30"></td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID31" rel="#L31">31</td>
+            <td nowrap class="diff-line-code line-data" id="LC31">Original text and license from the pyqrnative package where this was forked</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID32" rel="#L32">32</td>
+            <td nowrap class="diff-line-code line-data" id="LC32">from (http://code.google.com/p/pyqrnative):</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID33" rel="#L33">33</td>
+            <td nowrap class="diff-line-code line-data" id="LC33"></td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID34" rel="#L34">34</td>
+            <td nowrap class="diff-line-code line-data" id="LC34">#Ported from the Javascript library by Sam Curren</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID35" rel="#L35">35</td>
+            <td nowrap class="diff-line-code line-data" id="LC35">#</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID36" rel="#L36">36</td>
+            <td nowrap class="diff-line-code line-data" id="LC36">#QRCode for Javascript</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID37" rel="#L37">37</td>
+            <td nowrap class="diff-line-code line-data" id="LC37">#http://d-project.googlecode.com/svn/trunk/misc/qrcode/js/qrcode.js</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID38" rel="#L38">38</td>
+            <td nowrap class="diff-line-code line-data" id="LC38">#</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID39" rel="#L39">39</td>
+            <td nowrap class="diff-line-code line-data" id="LC39">#Copyright (c) 2009 Kazuhiko Arase</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID40" rel="#L40">40</td>
+            <td nowrap class="diff-line-code line-data" id="LC40">#</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID41" rel="#L41">41</td>
+            <td nowrap class="diff-line-code line-data" id="LC41">#URL: http://www.d-project.com/</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID42" rel="#L42">42</td>
+            <td nowrap class="diff-line-code line-data" id="LC42">#</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID43" rel="#L43">43</td>
+            <td nowrap class="diff-line-code line-data" id="LC43">#Licensed under the MIT license:</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID44" rel="#L44">44</td>
+            <td nowrap class="diff-line-code line-data" id="LC44">#   http://www.opensource.org/licenses/mit-license.php</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID45" rel="#L45">45</td>
+            <td nowrap class="diff-line-code line-data" id="LC45">#</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID46" rel="#L46">46</td>
+            <td nowrap class="diff-line-code line-data" id="LC46"># The word &quot;QR Code&quot; is registered trademark of</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID47" rel="#L47">47</td>
+            <td nowrap class="diff-line-code line-data" id="LC47"># DENSO WAVE INCORPORATED</td>
+          </tr>
+            <tr>
+              <td nowrap class="commitinfo"> </td>
+            <td class="js-heat line-age" data-date="2011-11-10T20:59:04+13:00"></td>
+            <td nowrap class="diff-line-num line-number" id="LID48" rel="#L48">48</td>
+            <td nowrap class="diff-line-code line-data" id="LC48">#   http://www.denso-wave.com/qrcode/faqpatent-e.html</td>
+          </tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2014 <span title="0.02969s from github-fe127-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-x close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-df9e4beac80276ed3dfa56be0d97b536d0f5ee12.js" type="text/javascript"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-df82ba4b57b9d4b49e4ef38975077d08caba28c5.js" type="text/javascript"></script>
+      
+      
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+  </body>
+</html>
+

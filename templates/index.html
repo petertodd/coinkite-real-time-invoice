@@ -50,6 +50,15 @@ table.cki-rate-table tr:first-child th {
     margin-top: -10px;
     margin-bottom: 10px;
 }
+
+.qrcode-container > svg {
+    width: 200px;
+    height: 200px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    text-align: right;
+}
+
 </style>
 
 <div class="container well" id="ck-invoice">
@@ -79,6 +88,7 @@ table.cki-rate-table tr:first-child th {
         &nbsp;
         <a class="popover-dismiss js-popover" data-toggle="popover"
             title="Exchange Rate" data-html='true'
+            data-placement="bottom"     {# so works on phone #}
             data-content="<table class='table condensed cki-rate-table'><tbody>
 <tr><td>1 BTC        <td>= <td>$600 USD
 <tr><td>23.34213 BTC <td>= <td>$234234 USD</table>">
@@ -95,8 +105,10 @@ table.cki-rate-table tr:first-child th {
     </div>
 
     <div class="col-sm-6 text-center">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" class="img-thumbnail" alt="QR Code">
-
+      {# <img src="/qr/example.svg" class="img-thumbnail" alt="QR Code" width=80%> #}
+      <div class="qrcode-container">
+        {{ 'bitcoin:1sdlkfjsldfkjsdlfkjsdlfkjsdf?amount=3'|svg_qr(30) }}
+      </div>
     </div>
   </div>
   <div class="row">
