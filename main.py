@@ -41,7 +41,7 @@ class InvoiceHandler(webapp2.RequestHandler):
             ('%s %s' % (ctx.amount, cct), '$612 USD'), 
         ]
         ctx.label = 'Doggy Dash Crypto Cash'
-        ctx.pubkey = '1blahxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+        ctx.pubkey = '1blahxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
         ctx.bitcoin_link = ('bitcoin:%s?' % ctx.pubkey) + urlencode(dict(
                             amount = ctx.amount, message = ctx.label))
     

@@ -38,7 +38,7 @@ var CK_INVOICE = (function () {
         $(".js-tooltip").tooltip();
         $(".js-popover").popover();
 
-        $(".js-selectable").on('click', my.selectContents).attr('title', 'Click to select for clipboard copy');
+        $(".js-selectable").on('click', my.selectContents).attr('title', 'Click to select for clipboard copy').tooltip();
     };
 
     return my;
