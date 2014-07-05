@@ -3,10 +3,11 @@
 {% block page_body %}
 <style>
 .cki-crypto-amount {
-    font-size: 125%;
+    margin-bottom: 0;
 }
 .cki-fiat-amount {
-    font-size: 80%;
+    xxfont-size: 80%;
+
 }
 .cki-big-pay {
     margin-top: 1em;
@@ -15,51 +16,98 @@
 .cki-link-btn {
     color: grey;
 }
+.cki-pubkey > code {
+    color: black;
+}
 .cki-timer-bar {
     margin: 0;
     margin-top: 1.5em;
 }
 .coinkite-credit {
-    margin: 0;
-    margin-top: 10px;
     opacity: 40%;
     font-size: 75%;
 }
+table.cki-rate-table > tbody > tr > td {
+    white-space: pre;
+}
+table.cki-rate-table tr:first-child td {
+    border-top: none;
+}
+table.cki-rate-table tr:first-child th {
+    border-top: none;
+}
+
+.js-selectable {
+    padding: 1px;
+    border-radius: 4px;
+}
+.js-selectable:hover {
+    border: 1px dashed grey;
+    cursor: pointer;
+}
+
+.cki-topmost-row {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
 </style>
 
-<div class="container">
-  <div class="row well">
-    <div class="col-xs-8 text-center">
+<div class="container well" id="ck-invoice">
+  <div class="row cki-topmost-row">
+    <div class="col-sm-12">
       <span class="pull-left text-left">
           <a class="cki-link-btn"><i class="fa fa-refresh"></i></span></a>
       </span>
-      <p class="cki-crypto-amount">
-        0.0500<span class="submilli">1234</span> BTC
+      <span class="pull-right coinkite-credit text-right">
+        Powered by <a href="https://coinkite.com" target="_new">Coinkite</a>
+      </span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 text-center">
+      <h3 class="cki-payee">
+        Doggy Dash Crypto Cash
+      </h3>
+      <p class="lead cki-crypto-amount">
+        <span class="js-selectable">12.05001234</span> BTC
       </p>
       <p class="cki-fiat-amount">
         ≈ $100 USD
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <a class="popover-dismiss js-popover" data-toggle="popover"
+            title="Exchange Rate" data-html='true'
+            data-content="<table class='table condensed cki-rate-table'><tbody>
+<tr><td>1 BTC        <td>= <td>$600 USD
+<tr><td>23.34213 BTC <td>= <td>$234234 USD</table>">
+            <i class="fa fa-exchange"></i><i class="fa fa-question"></i></a>
       </p>
       <p class="cki-big-pay">
         <button class="btn btn-large btn-primary"><i class="fa fa-btc fa-lg"></i>
-                &nbsp;&nbsp; Pay with Bitcoin</button>
+                &nbsp; Pay with Bitcoin</button>
       </p>
-      <p>
+      <p class="cki-pubkey">
         {# <button class="btn btn-xs">&nbsp; View Address &nbsp;</button> #}
-        <code>1bahxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
+        <code class="js-selectable">1bahxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
       </p>
-      <div class="progress cki-timer-bar">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-    8 minutes left
-        </div>
-      </div>
     </div>
 
-    <div class="col-xs-4 text-center">
+    <div class="col-sm-6 text-center">
         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" class="img-thumbnail" alt="QR Code">
 
-        <div class="coinkite-credit">
-          Powered by <a href="https://coinkite.com" target="_new">Coinkite</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="progress cki-timer-bar">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
         </div>
+        <div class="text-center">
+          <i class="fa fa-clock-o"></i> 2:23 left
+        </div>
+      </div>
     </div>
   </div>
 </div>

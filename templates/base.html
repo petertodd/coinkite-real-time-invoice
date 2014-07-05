@@ -9,10 +9,17 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Bootstrap CSS, but Bootstrap JS not needed nor desired -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS only here-->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="/static/css/style.css" rel="stylesheet">
+
+    <script src="/static/js/head.min.js"></script>
+    <script>
+        head.load("https://code.jquery.com/jquery-1.11.0.min.js",
+                  "/static/bootstrap/js/bootstrap.min.js",
+                  "/static/js/invoice.js");
+    </script>
   </head>
 
   <body id="home">

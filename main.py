@@ -22,6 +22,13 @@ class MainHandler(webapp2.RequestHandler):
         template = JINJA_ENV.get_template('index.html')
         self.response.write(template.render(template_values))
 
+class QRHandler(webapp2.RequestHandler):
+    def get(self):
+        # Render a QR?
+        self.response.write('QR')
+        
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
+    ('/qr', QRHandler)
 ], debug=True)
