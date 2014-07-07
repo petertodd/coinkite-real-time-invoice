@@ -118,13 +118,13 @@ table.cki-rate-table tr:first-child th {
       {% endif %}
       <p class="cki-big-pay">
         <a class="btn btn-large btn-primary" href="{{bitcoin_link}}" target="your-wallet">
-          {%- if cct == 'BTC' -%}
+          {%- if payable_cct == 'BTC' -%}
             <i class="fa fa-btc fa-lg"></i>&nbsp; Pay with Bitcoin
-          {%- elif cct == 'LTC' -%}
+          {%- elif payable_cct == 'LTC' -%}
             <b>Ł</b>&nbsp; Pay with Litecoin
-          {%- elif cct == 'BLK' -%}
+          {%- elif payable_cct == 'BLK' -%}
             <b>Ѣ</b>&nbsp; Pay with Blackcoin
-          {%- elif cct == 'XTN' -%}
+          {%- elif payable_cct == 'XTN' -%}
             <b>❀</b>&nbsp; Pretend with Testnet
           {%- else -%}
             Pay Now

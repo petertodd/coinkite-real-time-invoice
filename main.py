@@ -152,10 +152,14 @@ class MakeHandler(webapp2.RequestHandler):
 
         req = r.result
         n.pubkey = req.coin.address
-        n.refnum = req.ref_number
+        n.ck_refnum = req.ref_number
         
         # save it.
         key = n.put()
+
+        # bugfix: not seeing the new entry in the list after redirect
+        from google.appengine.ext import ndb
+        ndb.get_context().clear_cache()
 
         # redirect to making page.
         self.redirect('/make')

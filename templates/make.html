@@ -103,7 +103,7 @@
             <td class="text-right">{{i.payable}} {{i.payable_cct}}
             <td>{{'Y' if i.show_fiat else 'N'}}
             <td>{{i.label}}
-            <td>{{i.ck_refnum}}
+            <td><a href="https://coinkite.com/detail-view/{{i.ck_refnum}}" target="coinkite">{{i.ck_refnum}}</a>
         {% else %}
           <tr><td colspan=10><em>No invoices</em>
         {% endfor %}
