@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block page_body %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Make New Invoice</h1>
+    
+      <p class="lead">Please provide these values</p>
+
+      <form method="POST" class="form form-horizontal">
+
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Invoice Amount</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="amount" name="amount"
+                    pattern="[0-9.]+" placeholder="0.00" required>
+        </div>
+        <div class="col-sm-2">
+          <select class="form-control" id="amount_cct" name="amount_cct" required>
+            <option>USD</option>
+            <option>CAD</option>
+            <option>BTC</option>
+            <option>LTC</option>
+            <option>BLK</option>
+            <option>XTN</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="" CHECKED id="show_fiat" name="show_fiat">
+              Show fiat estimates on invoice?
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Payable In</label>
+        <div class="col-sm-2">
+          <select class="form-control" id="payable_cct" name="payable_cct" required>
+            <option>BTC</option>
+            <option>LTC</option>
+            <option>BLK</option>
+            <option>XTN</option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Name or Label</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="label" name="label" placeholder="optional"
+            value="Doggy Dash Crypto Cash">
+        </div>
+      </div>
+
+{#
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Email</label>
+        <div class="col-sm-9">
+          <input type="email" class="form-control" id="email" name="email" placeholder="optional">
+        </div>
+      </div>
+#}
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="reset" class="btn">Clear Form</button>
+          <button type="submit" class="btn btn-primary btn-default">Make Invoice</button>
+        </div>
+      </div>
+
+
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Recent Invoices</h2>
+
+      <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Link
+        <th>Status
+        <th class="text-right">Amount
+        <th class="text-right">Payable
+        <th>Show<br>Fiat?
+        <th>Name/Label
+        <th>CK Detail
+      <tbody>
+        {% for i in recent_invoices %}
+          <tr {% if i.is_recent %}class="info" {%endif%}>
+            <td><a href="{{i.get_url()}}">{{i.token}}</a>
+            <td>{{'Expired' if i.is_expired else ('PAID' if i.paid_at else '')}}
+            <td class="text-right">{{i.amount}} {{i.amount_cct}}
+            <td class="text-right">{{i.payable}} {{i.payable_cct}}
+            <td>{{'Y' if i.show_fiat else 'N'}}
+            <td>{{i.label}}
+            <td>{{i.ck_refnum}}
+        {% else %}
+          <tr><td colspan=10><em>No invoices</em>
+        {% endfor %}
+    </div>
+  </div>
+     
+    
+</div>
+{% endblock page_body %}

@@ -1,16 +1,39 @@
 
 
 var CK_INVOICE = (function () {
-    var my = {},
-        privateVariable = 1;
+    var my = {};
 
-    function privateMethod() {
-        // ...
+    // These are overriden by the template code.
+    my.max_time = 15 * 60;
+    my.time_left = my.max_time;
+
+    function set_expired() {
+        $('#js-expired').height($('#js-most-stuff').height());
+        $('#js-most-stuff').hide()
+        $('#js-expired').show()
+
+        $('#js-time-percent').width(0);
+        $('#js-time-left').text('expired');
+
+        my.time_left = 0;
     }
 
-    my.moduleProperty = 1;
+    function tick_handler() {
+        // called once per second
+        if(my.time_left <= 0) return;
 
-    my.selectContents = function(evt) {
+        my.time_left -= 1;
+
+        if(my.time_left) {
+            $('#js-time-left').text(numeral(my.time_left).format('0:00:00') + ' left');
+            $('#js-time-percent').width(((100*my.time_left) / my.max_time) + '%');
+        } else {
+            // done.
+            set_expired();
+        }
+    }
+
+    my.select_contents = function(evt) {
       var text = evt.target;
       var doc = document, range, selection;    
 
@@ -38,7 +61,19 @@ var CK_INVOICE = (function () {
         $(".js-tooltip").tooltip();
         $(".js-popover").popover();
 
-        $(".js-selectable").on('click', my.selectContents).attr('title', 'Click to select for clipboard copy').tooltip();
+        $(".js-selectable").on('click', my.select_contents)
+                    .attr('title', 'Click to select for copying').tooltip();
+
+        if(typeof(THIS_INVOICE) != 'undefined') {
+            my.time_left = THIS_INVOICE.time_left;
+            my.max_time = THIS_INVOICE.max_time;
+
+            if(my.time_left <= 0) {
+                set_expired();
+            } else {
+                my.tick_id = window.setInterval(tick_handler, 1000);
+            }
+        }
     };
 
     return my;
