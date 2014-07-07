@@ -1,0 +1,6 @@
+[submodule "lib/checkouts/python-qrcode"]
+	path = lib/checkouts/python-qrcode
+	url = https://github.com/lincolnloop/python-qrcode.git
+[submodule "lib/checkouts/coinkite-python"]
+	path = lib/checkouts/coinkite-python
+	url = git@github.com:coinkite/coinkite-python.git

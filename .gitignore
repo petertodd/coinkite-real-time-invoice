@@ -1,1 +1,4 @@
 *.py[cod]
+
+# Keep you settings in this file, if you don't want to commit them to repo
+settings_dev.py

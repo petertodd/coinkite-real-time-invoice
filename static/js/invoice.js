@@ -3,7 +3,7 @@
 var CK_INVOICE = (function () {
     var my = {};
 
-    // These are overriden by the template code.
+    // These are overriden on startup.
     my.max_time = 15 * 60;
     my.time_left = my.max_time;
 
@@ -24,7 +24,7 @@ var CK_INVOICE = (function () {
 
         my.time_left -= 1;
 
-        if(my.time_left) {
+        if(my.time_left > 0) {
             $('#js-time-left').text(numeral(my.time_left).format('0:00:00') + ' left');
             $('#js-time-percent').width(((100*my.time_left) / my.max_time) + '%');
         } else {
@@ -64,6 +64,7 @@ var CK_INVOICE = (function () {
         $(".js-selectable").on('click', my.select_contents)
                     .attr('title', 'Click to select for copying').tooltip();
 
+		// Do we have an invoice to work with?
         if(typeof(THIS_INVOICE) != 'undefined') {
             my.time_left = THIS_INVOICE.time_left;
             my.max_time = THIS_INVOICE.max_time;

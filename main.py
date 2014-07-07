@@ -7,15 +7,15 @@ sys.path.insert(1, os.path.join(os.path.abspath('.'), 'lib'))
 
 import webapp2, jinja2
 from decimal import Decimal
-import qrcode
+from base64 import b32encode
 from cStringIO import StringIO
 from jinja2 import Markup
-
-from qrcode.image.svg import SvgPathImage, SvgFragmentImage
-from qrcode.image.pil import PilImage
 from urllib import urlencode
 from urllib import quote as url_quote
-from base64 import b32encode
+
+import qrcode
+from qrcode.image.svg import SvgPathImage, SvgFragmentImage
+from qrcode.image.pil import PilImage
 
 from ckapi import CKRequestor, CKReqReceive, CKObject
 
@@ -27,11 +27,13 @@ JINJA_ENV = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-# setup for access to Coinkite API
-# TODO: add cct => account number map, and isolate into a config file.
-CK_API = CKRequestor(
-            'K3103c4b1-dd9db888-fb813e6144cb48b5',
-            'S607d57a8-f5405072-4959f4a92c982fd5')
+# API Keys and other unique configuration goes into "settings.py"
+try:
+    # if "settings_dev.py" exists, use that instead (so I don't have to commit my keys)
+    from settings_dev import *
+except ImportError:
+    # normally, you should put your settings into settings.py
+    from settings import *
 
 
 class MainHandler(webapp2.RequestHandler):
@@ -110,6 +112,7 @@ class MakeHandler(webapp2.RequestHandler):
         template = JINJA_ENV.get_template('make.html')
         ctx = CKObject()
         ctx.recent_invoices = MyInvoice.recent_invoices().fetch(40)
+        ctx.valid_coins = ACCOUNT_MAP.keys()
 
         self.response.write(template.render(ctx))
         
@@ -143,6 +146,13 @@ class MakeHandler(webapp2.RequestHandler):
         n.token = b32encode(os.urandom(10))
 
         # TODO get a pubkey for the request
+        acct = ACCOUNT_MAP[payable_cct]
+        r = CK_API.put('/v1/new/receive', account = acct, memo = 'Invoice %s' % n.get_url(),
+                                            amount = n.payable)
+
+        req = r.result
+        n.pubkey = req.coin.address
+        n.refnum = req.ref_number
         
         # save it.
         key = n.put()

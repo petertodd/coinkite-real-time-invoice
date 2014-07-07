@@ -43,10 +43,9 @@
         <label class="col-sm-3 control-label">Payable In</label>
         <div class="col-sm-2">
           <select class="form-control" id="payable_cct" name="payable_cct" required>
-            <option>BTC</option>
-            <option>LTC</option>
-            <option>BLK</option>
-            <option>XTN</option>
+            {% for xc in ['BTC', 'LTC', 'BLK', 'XTN'] if xc in valid_coins %}
+                <option>{{xc}}</option>
+            {% endfor %}
           </select>
         </div>
       </div>
