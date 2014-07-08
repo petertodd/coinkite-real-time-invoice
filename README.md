@@ -25,8 +25,10 @@ account today!
 
 ## The Demo
 
-[See a live Bitcoin Invoice demo here.](https://ck-rt-invoice.appspot.com/example.btc) 
-(But the data shown is placeholder so don't try to pay it!)
+<https://ck-rt-invoice.appspot.com>
+
+See a live [Bitcoin Invoice demo here.](https://ck-rt-invoice.appspot.com/example.btc) 
+(The data shown is placeholder, so don't try to pay it!)
 
 [Litecoin and Blackcoin examples](https://ck-rt-invoice.appspot.com) can be reached
 from the site home page.
@@ -83,14 +85,10 @@ email or whatever.
 - `models.py` Database models (one -- an invoice)
 - `settings.py` Coinkite API keys.
 
-## Security - Little or None
-
-Since this is just a demo, there are no logins or user authentication. Anyone can
-make an invoice, but that's okay since it's all money coming in, right? It would
-be easy to add Google identity login options.
+## Confirmations
 
 This system works on zero-confirmation (in BTC), which isn't
-appropriate for real money. It should have different language for
+appropriate for real money. It should have different messaging for
 zero and one confirmations and fully-confirmed amounts. Of course,
 you want to acknowledge the payment on zero confirmation, but you
 shouldn't ship any goods without at least one confirmation.
