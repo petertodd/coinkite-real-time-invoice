@@ -152,13 +152,20 @@ table.cki-rate-table tr:first-child th {
     </div>
   </div>
 
+  <div class="row" id='js-paid' style="display: none">
+    <div class="col-sm-12">
+        <h2><i class="fa fa-check-circle"></i> Paid</h2>
+        <p class="lead">This invoice has been paid. Thank you!</p>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-sm-12">
       <div class="progress cki-timer-bar">
         {# Just let the JS code do all the changes here, easier #}
         <div class="progress-bar" id="js-time-percent"
             role="progressbar" aria-valuemin="0" aria-valuemax="100"
-            style="width: 100%;">
+            style="width: {{ '0%' if is_paid else '100%' }};">
         </div>
         <span class="cki-time-left">
           <i class="fa fa-clock-o"></i> <span id="js-time-left">&nbsp;</span>
@@ -169,9 +176,30 @@ table.cki-rate-table tr:first-child th {
 </div>
 
 <script>
-var THIS_INVOICE = {
-    time_left: {{time_left}}, 
-    max_time: {{max_time}}
+function THIS_INVOICE() {
+    {% if is_paid %}
+      CK_INVOICE.set_ispaid();
+    {% else %}
+      CK_INVOICE.startup( {{time_left}},
+                          {{max_time}}, 
+                          "{{ck_refnum}}"
+        );
+    {% endif %}
 };
+
+head.load("https://cdn.pubnub.com/pubnub.min.js", function() {
+    var pubnub = PUBNUB.init({
+         subscribe_key: "{{pubnub_auth.subscribe_key}}",
+         auth_key: "{{pubnub_auth.auth_key}}",
+         ssl: true,
+    })
+
+    pubnub.subscribe({
+         channel : "{{pubnub_auth.channel}}",
+         message : CK_INVOICE.got_event,
+    })
+});
 </script>
+
+
 {% endblock page_body %}

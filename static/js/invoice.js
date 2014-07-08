@@ -6,6 +6,7 @@ var CK_INVOICE = (function () {
     // These are overriden on startup.
     my.max_time = 15 * 60;
     my.time_left = my.max_time;
+    my.ck_refnum = 'none';
 
     function set_expired() {
         $('#js-expired').height($('#js-most-stuff').height());
@@ -18,8 +19,20 @@ var CK_INVOICE = (function () {
         my.time_left = 0;
     }
 
+    my.set_ispaid = function() {
+        $('#js-paid').height($('#js-most-stuff').height());
+        $('#js-most-stuff').hide()
+        $('#js-paid').show()
+
+        $('#js-time-percent').width(0);
+        $('#js-time-left').hide();
+
+        my.time_left = 0;
+    }
+
     function tick_handler() {
         // called once per second
+        // NOTE: this is the wrong way to do this, but only a demo!
         if(my.time_left <= 0) return;
 
         my.time_left -= 1;
@@ -33,7 +46,35 @@ var CK_INVOICE = (function () {
         }
     }
 
-    my.select_contents = function(evt) {
+    my.startup = function(time_left, max_time, ck_refnum) {
+		// We have an invoice to work with. Animate it.
+        my.time_left = time_left;
+        my.max_time = max_time;
+        my.ck_refnum = ck_refnum;
+
+        if(my.time_left <= 0) {
+            set_expired();
+        } else {
+            my.tick_id = window.setInterval(tick_handler, 1000);
+        }
+    }
+
+    my.got_event = function(msg) {
+        if(msg.request != my.ck_refnum) return;
+
+        my.set_ispaid()
+    }
+
+    return my;
+}());
+
+head.ready(document, function () {
+
+    // All pages need these
+    $(".js-tooltip").tooltip();
+    $(".js-popover").popover();
+
+    select_contents = function(evt) {
       var text = evt.target;
       var doc = document, range, selection;    
 
@@ -55,32 +96,11 @@ var CK_INVOICE = (function () {
       }
     };
 
-    my.startup = function() {
-        console.log("Startup code");
-
-        $(".js-tooltip").tooltip();
-        $(".js-popover").popover();
-
-        $(".js-selectable").on('click', my.select_contents)
+    $(".js-selectable").on('click', select_contents)
                     .attr('title', 'Click to select for copying').tooltip();
 
-		// Do we have an invoice to work with?
-        if(typeof(THIS_INVOICE) != 'undefined') {
-            my.time_left = THIS_INVOICE.time_left;
-            my.max_time = THIS_INVOICE.max_time;
-
-            if(my.time_left <= 0) {
-                set_expired();
-            } else {
-                my.tick_id = window.setInterval(tick_handler, 1000);
-            }
-        }
-    };
-
-    return my;
-}());
-
-head.ready(document, function () {
-    CK_INVOICE.startup()
+    if(typeof(THIS_INVOICE) != 'undefined') {
+        THIS_INVOICE();
+    }
 });
 

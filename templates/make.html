@@ -69,7 +69,7 @@
 #}
 
       <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
+        <div class="col-sm-offset-3 col-sm-9">
           <button type="reset" class="btn">Clear Form</button>
           <button type="submit" class="btn btn-primary btn-default">Make Invoice</button>
         </div>
@@ -98,7 +98,7 @@
         {% for i in recent_invoices %}
           <tr {% if i.is_recent %}class="info" {%endif%}>
             <td><a href="{{i.get_url()}}">{{i.token}}</a>
-            <td>{{'Expired' if i.is_expired else ('PAID' if i.paid_at else '')}}
+            <td>{{'Expired' if i.is_expired else i.text_status }}
             <td class="text-right">{{i.amount}} {{i.amount_cct}}
             <td class="text-right">{{i.payable}} {{i.payable_cct}}
             <td>{{'Y' if i.show_fiat else 'N'}}

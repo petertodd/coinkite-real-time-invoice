@@ -19,6 +19,11 @@ handlers:
   static_dir: static
   secure: always
 
+- url: /make
+  script: main.app
+  login: admin
+  secure: always
+
 - url: .*
   script: main.app
   secure: always

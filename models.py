@@ -56,6 +56,7 @@ class MyInvoice(ndb.Model):
 
     @property
     def is_recent(self):
+        # created in last 30 seconds; for highlight in table
         return (NOW() - self.created_at).total_seconds() < 30
 
     def get_time_left(self):
