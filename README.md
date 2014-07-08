@@ -50,7 +50,7 @@ from the site home page.
 
 Clone this repo:
 
-	git clone git@github.com:coinkite/rt-invoice.git
+	git clone git@github.com:coinkite/coinkite-real-time-invoice.git
 
 Then update the submodules:
 
